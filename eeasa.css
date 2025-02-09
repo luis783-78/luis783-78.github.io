@@ -1,3 +1,4 @@
+/* RESETEO GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: Helvetica sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
@@ -17,14 +18,15 @@ header {
     color: white;
     padding: 15px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0 10px;
-    margin-bottom: 15px;
 }
 
 .logo {
@@ -42,28 +44,21 @@ header {
 .company-info strong {
     font-size: 16px;
     display: block;
-    margin-bottom: 2px;
 }
 
 .company-info p {
     font-size: 12px;
-    line-height: 1.2;
 }
 
-/* NAVEGACIÓN MÓVIL */
-nav {
-    width: 100%;
-}
-
+/* MENÚ */
 nav ul {
     list-style: none;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 nav li {
-    width: 100%;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -73,142 +68,43 @@ nav a {
     font-size: 14px;
     padding: 12px 15px;
     display: block;
-    width: 100%;
 }
 
-/* Menú desplegable sin JavaScript */
+/* MENÚ DESPLEGABLE */
 .dropdown-menu {
     background-color: #182347;
-    max-height: 0;
-    overflow: hidden;
+    display: none;
     transition: max-height 0.3s ease-out;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
-    max-height: 500px; /* Altura máxima para el menú desplegable */
+    display: block;
 }
 
-.dropdown-menu li {
-    padding-left: 15px;
-}
-
-.dropdown-menu a {
-    padding: 10px 15px;
-}
-
-/* SECCIONES */
+/* BANNER */
 .banner {
     width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.empresa {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.empresa h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #20315F;
-}
-
-.mision-vision {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-}
-
-.caja-mision, .caja-vision {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #20315F;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* VERSIÓN DESKTOP */
-@media screen and (min-width: 768px) {
-    header {
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .logo-area {
-        margin-bottom: 0;
-    }
-    
-    nav {
-        width: auto;
-    }
-    
-    nav ul {
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    nav li {
-        width: auto;
-        border-bottom: none;
-    }
-    
-    .dropdown {
-        position: relative;
-    }
-    
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 250px;
-        background-color: #20315F;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-{
-/* BANNER Y POLÍTICA */
-.banner {
-    width: 100%;
-    height: auto;
     min-height: 200px;
     background-color: #20315F;
     padding: 15px;
-    margin-bottom: 0;
 }
 
 .banner img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-/* SECCIONES PRINCIPALES */
+/* SECCIONES */
 .empresa {
-    margin: 15px;
+    margin: 10px;
     padding: 15px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .empresa h2 {
@@ -224,10 +120,10 @@ nav a {
 
 /* MISIÓN Y VISIÓN */
 .mision-vision {
-    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    padding: 15px;
 }
 
 .caja-mision, .caja-vision {
@@ -236,7 +132,6 @@ nav a {
     padding: 15px;
     border-radius: 8px;
     width: 100%;
-    margin: 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -250,7 +145,7 @@ nav a {
     line-height: 1.4;
 }
 
-/* AJUSTES RESPONSIVE */
+/* RESPONSIVE */
 @media screen and (min-width: 768px) {
     .banner {
         min-height: 300px;
@@ -273,11 +168,9 @@ nav a {
         margin: 20px;
         padding: 20px;
         max-width: 1200px;
-        margin: 20px auto;
     }
 }
 
-/* AJUSTES ESPECÍFICOS PARA MÓVILES PEQUEÑOS */
 @media screen and (max-width: 320px) {
     .banner {
         padding: 10px;
@@ -285,7 +178,7 @@ nav a {
 
     .empresa, .caja-mision, .caja-vision {
         padding: 12px;
-        margin: 10px;
+        margin: 5px;
     }
 
     .empresa h2, .caja-mision h2, .caja-vision h2 {
