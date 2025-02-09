@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* ESTILO GENERAL DEL BODY */
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
@@ -12,7 +13,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* HEADER */
+/* CABECERA */
 header {
     background-color: #20315F;
     color: white;
@@ -23,12 +24,14 @@ header {
     justify-content: space-between;
 }
 
+/* ÁREA DEL LOGO */
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* ESTILO DEL LOGO */
 .logo {
     width: 40px;
     height: 40px;
@@ -37,6 +40,7 @@ header {
     flex-shrink: 0;
 }
 
+/* INFORMACIÓN DE LA EMPRESA */
 .company-info {
     flex-grow: 1;
 }
@@ -50,7 +54,11 @@ header {
     font-size: 12px;
 }
 
-/* MENÚ */
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    width: 100%;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -82,10 +90,9 @@ nav a {
     display: block;
 }
 
+/* SECCIÓN DEL BANNER */
 .banner {
     width: 100%;
-    min-height: auto;
-    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,6 +105,7 @@ nav a {
     object-fit: contain;
 }
 
+/* SECCIÓN DE INFORMACIÓN DE LA EMPRESA */
 .empresa {
     margin: 10px;
     padding: 15px;
@@ -115,12 +123,11 @@ nav a {
 }
 
 .empresa p {
-    overflow-wrap: break-word;
-    word-break: break-word;
     text-align: justify;
+    font-size: 14px;
 }
 
-/* MISIÓN Y VISIÓN */
+/* SECCIÓN MISIÓN Y VISIÓN */
 .mision-vision {
     display: flex;
     flex-direction: column;
@@ -133,7 +140,6 @@ nav a {
     color: white;
     padding: 15px;
     border-radius: 8px;
-    width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -147,14 +153,8 @@ nav a {
     line-height: 1.4;
 }
 
-@media screen and (max-width: 600px) {
-    .banner img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-
+/* RESPONSIVE: SECCIÓN MISIÓN Y VISIÓN EN PANTALLAS GRANDES */
+@media screen and (min-width: 601px) {
     .mision-vision {
         flex-direction: row;
         padding: 20px;
@@ -174,12 +174,12 @@ nav a {
     }
 }
 
+/* RESPONSIVE: AJUSTES PARA PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 600px) {
     .banner img {
         max-width: 100%;
         height: auto;
     }
-}
 
     .empresa, .caja-mision, .caja-vision {
         padding: 12px;
@@ -194,3 +194,4 @@ nav a {
         font-size: 13px;
     }
 }
+
