@@ -186,9 +186,38 @@ nav a {
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     
+  .banner {
+    width: 100%;
+    position: relative;
+    padding-top: 40%; /* Aspecto 16:9 para móviles */
+    overflow: hidden;
+    background-color: #20315F;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre el espacio */
+    object-position: center; /* Centra la imagen */
+}
+
+/* Ajustes específicos para desktop */
+@media screen and (min-width: 768px) {
     .banner {
-        height: 300px;
+        padding-top: 30%; /* Aspecto más panorámico para desktop */
     }
+}
+
+/* Para pantallas muy grandes */
+@media screen and (min-width: 1200px) {
+    .banner {
+        padding-top: 25%; /* Altura máxima para pantallas grandes */
+        max-height: 500px; /* Evita que el banner sea demasiado alto */
+    }
+}
     
     .mision-vision {
         flex-direction: row;
