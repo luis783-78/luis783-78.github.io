@@ -1,11 +1,9 @@
-/* RESETEO GENERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ESTILO GENERAL DEL BODY */
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
@@ -13,7 +11,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* CABECERA */
 header {
     background-color: #20315F;
     color: white;
@@ -22,27 +19,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* ÁREA DEL LOGO */
 .logo-area {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* ESTILO DEL LOGO */
 .logo {
     width: 40px;
     height: 40px;
     background: url('logo.jpg') no-repeat center;
     background-size: contain;
-    flex-shrink: 0;
 }
 
-/* INFORMACIÓN DE LA EMPRESA */
 .company-info {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .company-info strong {
@@ -54,16 +50,14 @@ header {
     font-size: 12px;
 }
 
-/* MENÚ DE NAVEGACIÓN */
 nav {
-    width: 100%;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    gap: 15px;
 }
 
 nav li {
@@ -74,15 +68,15 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    padding: 12px 15px;
+    padding: 10px;
     display: block;
 }
 
-/* MENÚ DESPLEGABLE */
 .dropdown-menu {
     background-color: #182347;
     display: none;
-    transition: max-height 0.3s ease-out;
+    position: absolute;
+    min-width: 200px;
 }
 
 .dropdown:hover .dropdown-menu,
@@ -90,13 +84,20 @@ nav a {
     display: block;
 }
 
-/* SECCIÓN DEL BANNER */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .banner {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .banner img {
@@ -105,20 +106,14 @@ nav a {
     object-fit: contain;
 }
 
-/* SECCIÓN DE INFORMACIÓN DE LA EMPRESA */
 .empresa {
-    margin: 10px;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .empresa h2 {
     color: #20315F;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
@@ -127,68 +122,71 @@ nav a {
     font-size: 14px;
 }
 
-/* SECCIÓN MISIÓN Y VISIÓN */
 .mision-vision {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .caja-mision, .caja-vision {
     background-color: #20315F;
     color: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
 }
 
-.caja-mision h2, .caja-vision h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.caja-mision p, .caja-vision p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-/* RESPONSIVE: SECCIÓN MISIÓN Y VISIÓN EN PANTALLAS GRANDES */
 @media screen and (min-width: 601px) {
     .mision-vision {
         flex-direction: row;
-        padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
     }
 
     .caja-mision, .caja-vision {
-        width: 50%;
-        padding: 20px;
+        width: 45%;
     }
 
     .empresa {
-        margin: 20px;
-        padding: 20px;
         max-width: 1200px;
+        margin: 20px auto;
     }
 }
 
-/* RESPONSIVE: AJUSTES PARA PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 600px) {
-    .banner img {
-        max-width: 100%;
-        height: auto;
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-area {
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10px;
     }
 
     .empresa, .caja-mision, .caja-vision {
         padding: 12px;
-        margin: 5px;
+        margin: 10px;
     }
 
     .empresa h2, .caja-mision h2, .caja-vision h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
+
+    .empresa p, .caja-mision p, .caja-vision p {
+        font-size: 14px;
+    }
+}
+
 
     .empresa p, .caja-mision p, .caja-vision p {
         font-size: 13px;
