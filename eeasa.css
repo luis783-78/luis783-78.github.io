@@ -53,10 +53,12 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0;
 }
 
 nav li {
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
 }
 
 nav a {
@@ -154,6 +156,14 @@ nav a {
     nav li {
         text-align: center;
     }
+
+    .mision-vision {
+        flex-direction: column;
+    }
+
+    .caja-mision, .caja-vision {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 601px) {
@@ -186,6 +196,20 @@ nav a {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .empresa, .caja-mision, .caja-vision {
+        padding: 12px;
+        margin: 5px;
+    }
+
+    .empresa h2, .caja-mision h2, .caja-vision h2 {
+        font-size: 16px;
+    }
+
+    .empresa p, .caja-mision p, .caja-vision p {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width: 600px) {
     .empresa, .caja-mision, .caja-vision {
         padding: 12px;
