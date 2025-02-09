@@ -185,52 +185,114 @@ nav a {
         background-color: #20315F;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    
+{
+/* BANNER Y POLÍTICA */
 .banner {
     width: 100%;
-    height: auto; /* Cambiamos a auto para que se ajuste al contenido */
-    min-height: 250px; /* Altura mínima para asegurar visibilidad */
-    overflow: visible; /* Permitimos que el contenido sea visible */
+    height: auto;
+    min-height: 200px;
     background-color: #20315F;
-    position: relative;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 0;
 }
 
 .banner img {
     width: 100%;
     height: auto;
-    min-height: 250px;
-    object-fit: contain; /* Cambiamos a contain para mostrar todo el contenido */
-    object-position: center top; /* Alineamos desde arriba */
+    object-fit: contain;
 }
-@media screen and (max-width: 767px) {
-    .banner {
-        min-height: 300px; /* Más espacio en móvil */
-        padding: 10px;
-    }
-    
-    .banner img {
-        min-height: 300px;
-        width: 100%;
-        object-fit: contain;
-    }
-}
+
+/* SECCIONES PRINCIPALES */
 .empresa {
-    margin-top: 20px;
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+.empresa h2 {
+    color: #20315F;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.empresa p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MISIÓN Y VISIÓN */
+.mision-vision {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caja-mision, .caja-vision {
+    background-color: #20315F;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.caja-mision h2, .caja-vision h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.caja-mision p, .caja-vision p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* AJUSTES RESPONSIVE */
+@media screen and (min-width: 768px) {
+    .banner {
+        min-height: 300px;
+        padding: 20px;
+    }
+
     .mision-vision {
         flex-direction: row;
+        padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .caja-mision, .caja-vision {
         width: 50%;
-        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    .empresa {
+        margin: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 20px auto;
     }
 }
 
-    .caja-mision, .caja-vision {
-        width: 90%;
+/* AJUSTES ESPECÍFICOS PARA MÓVILES PEQUEÑOS */
+@media screen and (max-width: 320px) {
+    .banner {
+        padding: 10px;
+    }
+
+    .empresa, .caja-mision, .caja-vision {
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .empresa h2, .caja-mision h2, .caja-vision h2 {
+        font-size: 16px;
+    }
+
+    .empresa p, .caja-mision p, .caja-vision p {
+        font-size: 13px;
     }
 }
