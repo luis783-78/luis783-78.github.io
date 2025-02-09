@@ -186,80 +186,38 @@ nav a {
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     
-/* BANNER OPTIMIZADO PARA MÓVILES */
 .banner {
     width: 100%;
-    height: 180px; /* Altura base para móviles pequeños */
-    overflow: hidden;
+    height: auto; /* Cambiamos a auto para que se ajuste al contenido */
+    min-height: 250px; /* Altura mínima para asegurar visibilidad */
+    overflow: visible; /* Permitimos que el contenido sea visible */
     background-color: #20315F;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .banner img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    height: auto;
+    min-height: 250px;
+    object-fit: contain; /* Cambiamos a contain para mostrar todo el contenido */
+    object-position: center top; /* Alineamos desde arriba */
 }
-
-/* Dispositivos móviles pequeños */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
     .banner {
-        height: 150px;
+        min-height: 300px; /* Más espacio en móvil */
+        padding: 10px;
+    }
+    
+    .banner img {
+        min-height: 300px;
+        width: 100%;
+        object-fit: contain;
     }
 }
-
-/* Dispositivos móviles medianos (iPhone SE, etc) */
-@media screen and (min-width: 321px) and (max-width: 375px) {
-    .banner {
-        height: 160px;
-    }
-}
-
-/* Dispositivos móviles grandes (S8, POCO X3 Pro, etc) */
-@media screen and (min-width: 376px) and (max-width: 414px) {
-    .banner {
-        height: 170px;
-    }
-}
-
-/* Dispositivos móviles extra grandes */
-@media screen and (min-width: 415px) and (max-width: 767px) {
-    .banner {
-        height: 200px;
-    }
-}
-
-/* Tablets */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .banner {
-        height: 300px;
-    }
-}
-
-/* Desktop */
-@media screen and (min-width: 1024px) {
-    .banner {
-        height: 400px;
-    }
-}
-
-/* Para dispositivos con pantallas altas (como S8, POCO X3 Pro) */
-@media screen and (max-width: 767px) and (min-height: 700px) {
-    .banner {
-        height: 200px;
-    }
-}
-
-/* Para asegurar que el contenido siguiente al banner se vea bien */
 .empresa {
     margin-top: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-    
     .mision-vision {
         flex-direction: row;
         max-width: 1200px;
