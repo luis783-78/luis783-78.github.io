@@ -51,14 +51,14 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-end;
     width: 100%;
     padding: 0;
 }
 
 nav li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
+    margin-left: 20px;
 }
 
 nav a {
@@ -150,11 +150,12 @@ nav a {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     nav li {
-        text-align: center;
+        margin-left: 0;
     }
 
     .mision-vision {
@@ -184,16 +185,6 @@ nav a {
         padding: 20px;
         max-width: 1200px;
     }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    nav li {
-        border-bottom: none;
-        margin-left: 20px;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -205,25 +196,6 @@ nav a {
     .empresa h2, .caja-mision h2, .caja-vision h2 {
         font-size: 16px;
     }
-
-    .empresa p, .caja-mision p, .caja-vision p {
-        font-size: 13px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .empresa, .caja-mision, .caja-vision {
-        padding: 12px;
-        margin: 5px;
-    }
-
-    .empresa h2, .caja-mision h2, .caja-vision h2 {
-        font-size: 16px;
-    }
-
-    .empresa p, .caja-mision p, .caja-vision p {
-        font-size: 13px;
-    }
-}
 
     .empresa p, .caja-mision p, .caja-vision p {
         font-size: 13px;
