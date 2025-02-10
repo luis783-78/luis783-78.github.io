@@ -71,16 +71,14 @@ nav a {
     display: block;
 }
 
-.dropdown-menu {
-    background-color: #182347;
-    display: none;
-    position: absolute;
-    z-index: 1;
+.dropdown {
+  position: relative;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-    display: block;
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
 }
 
 .banner {
