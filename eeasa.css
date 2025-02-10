@@ -48,30 +48,40 @@ header {
     font-size: 12px;
 }
 
+nav {
+    width: 100%;
+    order: 2;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     width: 100%;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav li {
-    margin-left: 20px;
+    margin: 5px 0;
+    flex: 1 0 auto;
+    text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    padding: 12px 15px;
+    padding: 10px 15px;
     display: block;
 }
 
 .dropdown-menu {
     background-color: #182347;
     display: none;
+    position: absolute;
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-menu,
@@ -81,18 +91,14 @@ nav a {
 
 .banner {
     width: 100%;
-    min-height: auto;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    overflow: hidden;
 }
 
 .banner img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    display: block;
+    object-fit: cover;
 }
 
 .empresa {
@@ -156,14 +162,14 @@ nav a {
     }
 
     nav li {
-        margin-left: 0;
+        margin: 5px 0;
+        flex: 1 0 auto;
         text-align: center;
-        flex: 1 1 45%; /* Ajusta el tamaño de los elementos del menú */
     }
 
     nav a {
-        font-size: 12px; /* Reduce el tamaño de la fuente para móviles */
-        padding: 8px 10px; /* Ajusta el padding para móviles */
+        font-size: 12px;
+        padding: 8px 10px;
     }
 
     .mision-vision {
@@ -172,6 +178,19 @@ nav a {
 
     .caja-mision, .caja-vision {
         width: 100%;
+    }
+
+    .empresa, .caja-mision, .caja-vision {
+        padding: 12px;
+        margin: 5px;
+    }
+
+    .empresa h2, .caja-mision h2, .caja-vision h2 {
+        font-size: 16px;
+    }
+
+    .empresa p, .caja-mision p, .caja-vision p {
+        font-size: 13px;
     }
 }
 
@@ -228,20 +247,5 @@ nav a {
 
     nav li {
         margin-left: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .empresa, .caja-mision, .caja-vision {
-        padding: 12px;
-        margin: 5px;
-    }
-
-    .empresa h2, .caja-mision h2, .caja-vision h2 {
-        font-size: 16px;
-    }
-
-    .empresa p, .caja-mision p, .caja-vision p {
-        font-size: 13px;
     }
 }
