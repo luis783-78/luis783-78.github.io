@@ -52,21 +52,15 @@ nav {
     width: 100%;
     order: 2;
 }
-
 nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding: 0;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around; 
+  flex-wrap: wrap; 
 }
 
 nav li {
-    margin: 5px 0;
-    flex: 1 0 auto;
-    text-align: center;
+  margin: 10px; 
 }
 
 nav a {
